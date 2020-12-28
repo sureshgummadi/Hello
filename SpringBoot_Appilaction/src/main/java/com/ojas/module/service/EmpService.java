@@ -9,7 +9,7 @@ import com.ojas.module.model.Employee;
 public interface EmpService {
 
 	
-	//Welocme
+	//Welocme edit
 	public ResponseEntity<Object> createEmp(Employee emp) throws Exception;
 	public ResponseEntity<Object> getAllEmployees(int pageNo,int pageSIze) throws Exception;
     public ResponseEntity<Object> deleteEmp(Integer id);
