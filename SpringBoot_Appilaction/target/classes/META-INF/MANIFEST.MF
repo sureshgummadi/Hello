@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: SpringBoot_Appilaction
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: vg19434
+Implementation-Vendor-Id: com.ojas.module
+Build-Jdk: 1.8.0_251
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/SpringBoot_Appilaction
+Created-By: Maven Integration for Eclipse
+
