@@ -11,6 +11,7 @@ public interface EmpService {
 	
 	//Welocme edit
 	//helloooooo
+	//changes
 	public ResponseEntity<Object> createEmp(Employee emp) throws Exception;
 	public ResponseEntity<Object> getAllEmployees(int pageNo,int pageSIze) throws Exception;
     public ResponseEntity<Object> deleteEmp(Integer id);
