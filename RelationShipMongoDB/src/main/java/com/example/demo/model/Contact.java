@@ -1,5 +1,5 @@
 package com.example.demo.model;
-
+//table
 public class Contact {
 	private String address;
 	private String phone;
