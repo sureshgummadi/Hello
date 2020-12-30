@@ -1,0 +1,7 @@
+server.port=6565
+spring.application.name=ZUUL_PROXY
+eureka.client.service-url.default-zone = http://localhost:2528/eureka
+zuul.routes.coupanserv.service-id=COUPAN-APP
+zuul.routes.coupanserv.path=/coupan-api/**
+zuul.routes.productserv.service-id=PRODUCT-APP
+zuul.routes.productserv.path=/prod-api/**

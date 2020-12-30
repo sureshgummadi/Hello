@@ -1,0 +1,1154 @@
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        SpringBoot_Appilaction/.gitignore
+        SpringBoot_Appilaction/.metadata/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git add *
+warning: LF will be replaced by CRLF in SpringBoot_Appilaction/.gitignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in SpringBoot_Appilaction/.metadata/.log.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.16.0.20200318-1040.xml.
+The file will have its original line endings in your working directory
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   SpringBoot_Appilaction/.gitignore
+        new file:   SpringBoot_Appilaction/.metadata/.lock
+        new file:   SpringBoot_Appilaction/.metadata/.log
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.16.0.20200318-1040.xml
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.tips.ide/dialog_settings.xml
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml
+        new file:   SpringBoot_Appilaction/.metadata/version.ini
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git commit -m "changes in service"
+[Branch1 419a8c5] changes in service
+ Committer: Venkata Subbaiah Gummadi <vg19434@corp.ojas-it.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 19 files changed, 2889 insertions(+)
+ create mode 100644 SpringBoot_Appilaction/.gitignore
+ create mode 100644 SpringBoot_Appilaction/.metadata/.lock
+ create mode 100644 SpringBoot_Appilaction/.metadata/.log
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.16.0.20200318-1040.xml
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.tips.ide/dialog_settings.xml
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml
+ create mode 100644 SpringBoot_Appilaction/.metadata/version.ini
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git push
+fatal: The current branch Branch1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin Branch1
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git push --set-upstream origin Branch1
+To https://github.com/sureshgummadi/Hello.git
+ ! [rejected]        Branch1 -> Branch1 (fetch first)
+error: failed to push some refs to 'https://github.com/sureshgummadi/Hello.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git pull
+remote: Enumerating objects: 22, done.
+remote: Counting objects: 100% (22/22), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 12 (delta 3), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (12/12), 1.74 KiB | 26.00 KiB/s, done.
+From https://github.com/sureshgummadi/Hello
+ * [new branch]      Branch1    -> origin/Branch1
+   7a7e690..2714631  master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> Branch1
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git push --set-upstream origin Branch1
+To https://github.com/sureshgummadi/Hello.git
+ ! [rejected]        Branch1 -> Branch1 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/sureshgummadi/Hello.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git branch
+* Branch1
+  Branch2
+  master
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git push -b Branch1
+error: unknown switch `b'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git push origin -b Branch1
+error: unknown switch `b'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git push origin Branch1
+To https://github.com/sureshgummadi/Hello.git
+ ! [rejected]        Branch1 -> Branch1 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/sureshgummadi/Hello.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        SpringBoot_Appilaction/.classpath
+        SpringBoot_Appilaction/.metadata/
+        SpringBoot_Appilaction/.project
+        SpringBoot_Appilaction/.settings/
+        SpringBoot_Appilaction/HELP.md
+        SpringBoot_Appilaction/target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git add .
+warning: LF will be replaced by CRLF in SpringBoot_Appilaction/HELP.md.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in SpringBoot_Appilaction/target/classes/META-INF/maven/com.ojas.module/SpringBoot_Appilaction/pom.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in SpringBoot_Appilaction/target/classes/application.yml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in SpringBoot_Appilaction/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst.
+The file will have its original line endings in your working directory
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   SpringBoot_Appilaction/.classpath
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/Cloud Foundry.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/Docker.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jsch.core.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springframework.ide.eclipse.imports.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.frameworks.core.prefs
+        new file:   SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.ui.prefs
+        new file:   SpringBoot_Appilaction/.project
+        new file:   SpringBoot_Appilaction/.settings/org.eclipse.core.resources.prefs
+        new file:   SpringBoot_Appilaction/.settings/org.eclipse.jdt.apt.core.prefs
+        new file:   SpringBoot_Appilaction/.settings/org.eclipse.jdt.core.prefs
+        new file:   SpringBoot_Appilaction/.settings/org.eclipse.m2e.core.prefs
+        new file:   SpringBoot_Appilaction/HELP.md
+        new file:   SpringBoot_Appilaction/target/classes/META-INF/MANIFEST.MF
+        new file:   SpringBoot_Appilaction/target/classes/META-INF/maven/com.ojas.module/SpringBoot_Appilaction/pom.properties
+        new file:   SpringBoot_Appilaction/target/classes/META-INF/maven/com.ojas.module/SpringBoot_Appilaction/pom.xml
+        new file:   SpringBoot_Appilaction/target/classes/application.yml
+        new file:   SpringBoot_Appilaction/target/classes/log4j.properties
+        new file:   SpringBoot_Appilaction/target/classes/module.log
+        new file:   SpringBoot_Appilaction/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+        new file:   SpringBoot_Appilaction/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git commit -m "changes in @service"
+[master a81af6f] changes in @service
+ Committer: Venkata Subbaiah Gummadi <vg19434@corp.ojas-it.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 28 files changed, 1231 insertions(+)
+ create mode 100644 SpringBoot_Appilaction/.classpath
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/Cloud Foundry.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/Docker.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jsch.core.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springframework.ide.eclipse.imports.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.frameworks.core.prefs
+ create mode 100644 SpringBoot_Appilaction/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.ui.prefs
+ create mode 100644 SpringBoot_Appilaction/.project
+ create mode 100644 SpringBoot_Appilaction/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 SpringBoot_Appilaction/.settings/org.eclipse.jdt.apt.core.prefs
+ create mode 100644 SpringBoot_Appilaction/.settings/org.eclipse.jdt.core.prefs
+ create mode 100644 SpringBoot_Appilaction/.settings/org.eclipse.m2e.core.prefs
+ create mode 100644 SpringBoot_Appilaction/HELP.md
+ create mode 100644 SpringBoot_Appilaction/target/classes/META-INF/MANIFEST.MF
+ create mode 100644 SpringBoot_Appilaction/target/classes/META-INF/maven/com.ojas.module/SpringBoot_Appilaction/pom.properties
+ create mode 100644 SpringBoot_Appilaction/target/classes/META-INF/maven/com.ojas.module/SpringBoot_Appilaction/pom.xml
+ create mode 100644 SpringBoot_Appilaction/target/classes/application.yml
+ create mode 100644 SpringBoot_Appilaction/target/classes/log4j.properties
+ create mode 100644 SpringBoot_Appilaction/target/classes/module.log
+ create mode 100644 SpringBoot_Appilaction/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+ create mode 100644 SpringBoot_Appilaction/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git pull
+Merge made by the 'recursive' strategy.
+ .../src/main/java/com/ojas/module/service/EmpService.java               | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git pull
+Already up to date.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git push
+Enumerating objects: 51, done.
+Counting objects: 100% (51/51), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (35/35), done.
+Writing objects: 100% (47/47), 10.84 KiB | 1009.00 KiB/s, done.
+Total 47 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/sureshgummadi/Hello.git
+   2714631..172757e  master -> master
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git pull
+remote: Enumerating objects: 42, done.
+remote: Counting objects: 100% (34/34), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 22 (delta 6), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (22/22), 2.26 KiB | 64.00 KiB/s, done.
+From https://github.com/sureshgummadi/Hello
+   172757e..7f41837  master     -> origin/master
+   72227a7..459d994  Branch1    -> origin/Branch1
+Updating 172757e..7f41837
+Fast-forward
+ .../src/main/java/com/ojas/module/service/EmpService.java                | 1 +
+ 1 file changed, 1 insertion(+)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git checkout Branch1
+Switched to branch 'Branch1'
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ gti status
+bash: gti: command not found
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git pull origin Branch1
+From https://github.com/sureshgummadi/Hello
+ * branch            Branch1    -> FETCH_HEAD
+Auto-merging SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+CONFLICT (content): Merge conflict in SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1|MERGING)
+$ git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1|MERGING)
+$ ls
+SpringBoot_Appilaction/
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1|MERGING)
+$ git status
+On branch Branch1
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1|MERGING)
+$ git checkout master
+error: you need to resolve your current index first
+SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java: needs merge
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1|MERGING)
+$ git add .
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1|MERGING)
+$ git commit -m "new1"
+[Branch1 d019d43] new1
+ Committer: Venkata Subbaiah Gummadi <vg19434@corp.ojas-it.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git checkout Branch1
+Switched to branch 'Branch1'
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git push
+fatal: The current branch Branch1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin Branch1
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git push origin Branch1
+Enumerating objects: 69, done.
+Counting objects: 100% (69/69), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (33/33), done.
+Writing objects: 100% (49/49), 58.47 KiB | 2.92 MiB/s, done.
+Total 49 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 2 local objects.
+To https://github.com/sureshgummadi/Hello.git
+   459d994..d019d43  Branch1 -> Branch1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash
+Saved working directory and index state WIP on Branch1: d019d43 new1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git checkout Branch1
+Switched to branch 'Branch1'
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash drop
+Dropped refs/stash@{0} (d5543cafd6357cadd724e531d959f0434e2cc46c)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash pop
+No stash entries found.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash list
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash
+Saved working directory and index state WIP on Branch1: d019d43 new1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash list
+stash@{0}: WIP on Branch1: d019d43 new1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash pop
+On branch Branch1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (c55e8f0f6dcf7936f9e9ff10c9a31bae5c9b04bb)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ touch file{1..5}
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1
+        file2
+        file3
+        file4
+        file5
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash
+Saved working directory and index state WIP on Branch1: d019d43 new1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash list
+stash@{0}: WIP on Branch1: d019d43 new1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ touch suman1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash
+No local changes to save
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash list
+stash@{0}: WIP on Branch1: d019d43 new1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1
+        file2
+        file3
+        file4
+        file5
+        suman1
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash suman1
+fatal: unknown subcommand: suman1
+
+usage: git stash list [<options>]
+   or: git stash show [<options>] [<stash>]
+   or: git stash drop [-q|--quiet] [<stash>]
+   or: git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+   or: git stash branch <branchname> [<stash>]
+   or: git stash clear
+   or: git stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
+          [-u|--include-untracked] [-a|--all] [-m|--message <message>]
+          [--pathspec-from-file=<file> [--pathspec-file-nul]]
+          [--] [<pathspec>...]]
+   or: git stash save [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
+          [-u|--include-untracked] [-a|--all] [<message>]
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash list
+stash@{0}: WIP on Branch1: d019d43 new1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash
+No local changes to save
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash drop
+Dropped refs/stash@{0} (9da2f74068de5dafe262cded2ca8ea0f6ede1a55)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash list
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1
+        file2
+        file3
+        file4
+        file5
+        suman1
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash file1
+fatal: unknown subcommand: file1
+
+usage: git stash list [<options>]
+   or: git stash show [<options>] [<stash>]
+   or: git stash drop [-q|--quiet] [<stash>]
+   or: git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+   or: git stash branch <branchname> [<stash>]
+   or: git stash clear
+   or: git stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
+          [-u|--include-untracked] [-a|--all] [-m|--message <message>]
+          [--pathspec-from-file=<file> [--pathspec-file-nul]]
+          [--] [<pathspec>...]]
+   or: git stash save [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
+          [-u|--include-untracked] [-a|--all] [<message>]
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash save
+No local changes to save
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash list
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1
+        file2
+        file3
+        file4
+        file5
+        suman1
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash
+No local changes to save
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1
+        file2
+        file3
+        file4
+        file5
+        suman1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git stash
+Saved working directory and index state WIP on Branch1: d019d43 new1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git add *
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file1
+        new file:   file2
+        new file:   file3
+        new file:   file4
+        new file:   file5
+        new file:   suman1
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ ls
+file1  file2  file3  file4  file5  SpringBoot_Appilaction/  suman1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ rm -rf file{1..5}
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ ls
+SpringBoot_Appilaction/  suman1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ rm suman1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file1
+        new file:   file2
+        new file:   file3
+        new file:   file4
+        new file:   file5
+        new file:   suman1
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    file1
+        deleted:    file2
+        deleted:    file3
+        deleted:    file4
+        deleted:    file5
+        deleted:    suman1
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git add *
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file1
+        new file:   file2
+        new file:   file3
+        new file:   file4
+        new file:   file5
+        new file:   suman1
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    file1
+        deleted:    file2
+        deleted:    file3
+        deleted:    file4
+        deleted:    file5
+        deleted:    suman1
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git commit -m "ddskda"
+[master b355cfa] ddskda
+ Committer: Venkata Subbaiah Gummadi <vg19434@corp.ojas-it.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 6 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1
+ create mode 100644 file2
+ create mode 100644 file3
+ create mode 100644 file4
+ create mode 100644 file5
+ create mode 100644 suman1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    file1
+        deleted:    file2
+        deleted:    file3
+        deleted:    file4
+        deleted:    file5
+        deleted:    suman1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sureshgummadi/Hello.git
+   7f41837..b355cfa  master -> master
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git add *
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    file1
+        deleted:    file2
+        deleted:    file3
+        deleted:    file4
+        deleted:    file5
+        deleted:    suman1
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git push
+Everything up-to-date
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git checkout master
+Already on 'master'
+M       SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+D       file1
+D       file2
+D       file3
+D       file4
+D       file5
+D       suman1
+Your branch is up to date with 'origin/master'.
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git push
+Everything up-to-date
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    file1
+        deleted:    file2
+        deleted:    file3
+        deleted:    file4
+        deleted:    file5
+        deleted:    suman1
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git add .
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git stataus
+git: 'stataus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+        deleted:    file1
+        deleted:    file2
+        deleted:    file3
+        deleted:    file4
+        deleted:    file5
+        deleted:    suman1
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git commit -m "new add"
+[master 48b3d74] new add
+ Committer: Venkata Subbaiah Gummadi <vg19434@corp.ojas-it.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 7 files changed, 1 insertion(+)
+ delete mode 100644 file1
+ delete mode 100644 file2
+ delete mode 100644 file3
+ delete mode 100644 file4
+ delete mode 100644 file5
+ delete mode 100644 suman1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git push
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (11/11), 780 bytes | 390.00 KiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/sureshgummadi/Hello.git
+   b355cfa..48b3d74  master -> master
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (master)
+$ git checkout Branch1
+Switched to branch 'Branch1'
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+nothing to commit, working tree clean
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git add *
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git status
+On branch Branch1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SpringBoot_Appilaction/src/main/java/com/ojas/module/service/EmpService.java
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git commit -m "nbffadd"
+[Branch1 a61a6d5] nbffadd
+ Committer: Venkata Subbaiah Gummadi <vg19434@corp.ojas-it.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git push
+fatal: The current branch Branch1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin Branch1
+
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ git push origin Branch1
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (11/11), 781 bytes | 390.00 KiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/sureshgummadi/Hello.git
+   d019d43..a61a6d5  Branch1 -> Branch1
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ ^C
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$ ^C
+
+vg19434@OJASDD-204 MINGW64 ~/Desktop/MyProfile/Git Updated/Hello/Hello (Branch1)
+$

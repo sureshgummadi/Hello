@@ -1,0 +1,9 @@
+package com.example.demo.exception;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Component
+
+public class ApiError {
+
+}
