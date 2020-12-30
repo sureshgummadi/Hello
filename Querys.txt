@@ -1,0 +1,101 @@
+select rt.ramtype_id,rt.ramtype_name,rc.* from `ram_type_capacities` rtc join `ram_master` rc on rc.ram_id = rtc.ram_capacity_id 
+join `ram_type_master` rt on rt.ramtype_id = rtc.ram_type_id WHERE rt.ramtype_name LIKE 'D%' order by rc.lastmodefied_date desc limit 0,2;
+
+SELECT * FROM inventory.brand;
+select harddisktype.harddisk_type,hcapacity.* from `hard_disk_type_capacities` hdc join `hard_disk_capacity` hcapacity on hcapacity.harddisk_capacity_id = hdc.harddisk_capacity_id join `hard_disk_type_master` harddisktype on harddisktype.hard_disk_type_id = hdc.hard_disk_type_id;
+
+select harddisktype.harddisk_type,hcapacity.* from `hard_disk_type_capacities` hdc 
+join `hard_disk_capacity` hcapacity on hcapacity.harddisk_capacity_id = hdc.harddisk_capacity_id 
+join `hard_disk_type_master` harddisktype on harddisktype.hard_disk_type_id = hdc.hard_disk_type_id WHERE hcapacity.harddisk_capacity_type  LIKE '%4%';
+
+
+select as1.assetid,as1.assettype,br.* from  `asset_type_brand` bd 
+join  `brand` br on br.brandid=bd.brand_bid join `asset_type1` as1 on as1.assetid=bd.asset_type_id; 
+
+select rt.ramtype_id,rt.ramtype_name,rc.* from `ram_type_capacities` rt join `ram_master` rc on rc.ram_id = rtc.ram_capacity_id join `ram_type_master` rt on rt.ramtype_id = rtc.ram_type_id;
+
+ WHERE rt.ramtype_name LIKE 's%' order by rc.lastmodefied_date DESC;
+
+SELECT * FROM inventory.employee;
+
+select harddisktype.harddisk_type,hcapacity.* from hard_disk_type_capacities as hdc 
+join hard_disk_capacity as hcapacity on hcapacity.harddisk_capacity_id = hdc.harddisk_capacity_id  
+join hard_disk_type_master harddisktype on harddisktype.hard_disk_type_id = hdc.hard_disk_type_id;
+
+
+SELECT * FROM inventory.hard_disk_capacity;
+
+ SELECT u1.id, u1.name, CONCAT(u1.firstName,' ',u1.lastName) AS fullName, u1.contactNumber, u1.extension, u1.email, u1.role, u1.status, 
+ CONCAT(u2.firstName,' ',u2.lastName) AS reportsTo, u2.name AS reportingMail FROM `user` u1 
+ INNER JOIN `user` u2 ON u2.id = u1.reportingId_id 
+ 
+ select * from assect_10;
+
+
+SELECT * FROM inventory.brand;
+
+
+select ramtype.ramtype_name,capacity.* from `ram_type_capacities` rc
+join `ram_master` capacity on capacity.ram_id = rc.ram_capacity_id
+join `ram_type_master` ramtype on ramtype.ramtype_id = rc.ram_type_id where ramtype.ramtype_name='null' or capacity.ram_capacity='16GB' order by capacity.created_on desc limit 0,2;
+
+select harddisktype.harddisk_type,hcapacity.* from `hard_disk_type_capacities` hdc
+join `hard_disk_capacity` hcapacity on hcapacity.harddisk_capacity_id = hdc.harddisk_capacity_id
+join `hard_disk_type_master` harddisktype on harddisktype.hard_disk_type_id = hdc.hard_disk_type_id where harddisktype.harddisk_type='harddisk_type' or hcapacity.harddisk_capacity_type='16GB' order by hcapacity.latestdate desc limit 0,2; 
+
+
+select * from hard_disk_capacity ;
+
+select harddisktype.harddisk_type from `hard_disk_type_capacities` hdc
+join `hard_disk_type_master` harddisktype on harddisktype.hard_disk_type_id = hdc.hard_disk_type_id;
+
+
+select harddisktype.harddisk_type,hcapacity.* from `hard_disk_type_capacities` hdc 
+join `hard_disk_capacity` hcapacity on hcapacity.harddisk_capacity_id = hdc.harddisk_capacity_id 
+join `hard_disk_type_master` harddisktype on harddisktype.hard_disk_type_id = hdc.hard_disk_type_id where harddisktype.harddisk_type='null' 
+or hcapacity.harddisk_capacity_type='16GB' order by hcapacity.created_on desc limit 0,2;
+
+
+SELECT * FROM inventory.brand;
+order by br.lastmodefied_date DESC;
+
+select harddisktype.harddisk_type,hcapacity.* from `hard_disk_type_capacities` hdc 
+join `hard_disk_capacity` hcapacity on hcapacity.harddisk_capacity_id = hdc.harddisk_capacity_id 
+join `hard_disk_type_master` harddisktype on harddisktype.hard_disk_type_id = hdc.hard_disk_type_id
+where harddisktype.harddisk_type='null' or hcapacity.harddisk_capacity_type='16GB' order by hcapacity.latestdate desc limit 0,2;
+
+SELECT * FROM inventory.brand_model;
+select harddisktype.harddisk_type,hcapacity.* from `hard_disk_type_capacities` hdc 
+join `hard_disk_capacity` hcapacity on hcapacity.harddisk_capacity_id = hdc.harddisk_capacity_id 
+join `hard_disk_type_master` harddisktype on harddisktype.hard_disk_type_id = hdc.hard_disk_type_id 
+where harddisktype.harddisk_type='null' or hcapacity.harddisk_capacity_type='16gb';
+
+
+
+select as1.assettype,br.* from  `asset_type_brand` bd
+join  brand br on br.brandid=  bd.brand_bid
+join `asset_type1` as1 on as1.assetid=bd.asset_type_id where  br.brandname='dell' and as1.assettype='Laptop';
+
+select as1.assettype,br.brandname from `brand_model` bm
+join  brand br on br.brandid=  bd.brand_bid
+join  `model` md on md.modelid=  bm.brand_bid
+join `asset_type1` as1 on as1.assetid=bd.asset_type_id where  br.brandname='dell' and as1.assettype='Laptop';
+
+select as1.assettype,br.*,md.* from `brand_model` bm,`asset_type_brand` bd
+join  brand br on br.brandid=  bd.brand_bid
+join model md on md.modelid=  bm.model_modelid
+join `asset_type1` as1 on as1.assetid=bd.asset_type_id where  bd.brandname='Dell' and as1.assettype='Laptop';
+
+
+select as1.assettype,br.* from  `asset_type_brand` bd
+join  brand br on br.brandid=  bd.brand_bid
+join `brand` as1 on as1.assetid=bd.asset_type_id where  br.brandname='dell' and as1.assettype='Laptop';
+
+select as1.assettype,br.* from  `asset_type_brand` bd 
+join  brand br on br.brandid=  bd.brand_bid 
+join `asset_type1` as1 on as1.assetid=bd.asset_type_id order by br.latest_date DESC limit 0,2
+
+
+select ramtype.ramtype_name,capacity.* from `ram_type_capacities` rc
+join `ram_master` capacity on capacity.ram_id = rc.ram_capacity_id
+join `ram_type_master` ramtype on ramtype.ramtype_id = rc.ram_type_id where ramtype.ramtype_name='null' or capacity.ram_capacity='16GB' order by capacity.created_on desc limit 0,2;

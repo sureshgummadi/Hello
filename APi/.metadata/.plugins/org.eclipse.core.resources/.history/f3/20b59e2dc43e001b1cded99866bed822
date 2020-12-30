@@ -1,0 +1,9 @@
+package com.example.demo.servimpl;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.service.ProductService;
+@Service
+public class ProductServiceImpl implements ProductService{
+
+}

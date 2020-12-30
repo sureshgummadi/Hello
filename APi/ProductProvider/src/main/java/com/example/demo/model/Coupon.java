@@ -1,0 +1,52 @@
+package com.example.demo.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Coupon {
+	private Integer couponId;
+	private String couponCode;
+	private Double couponDisc;
+	private String expDate;
+	@JsonIgnore
+	private Boolean applied=false;
+	
+	public Integer getCouponId() {
+		return couponId;
+	}
+	public void setCouponId(Integer couponId) {
+		this.couponId = couponId;
+	}
+	public String getCouponCode() {
+		return couponCode;
+	}
+	public void setCouponCode(String couponCode) {
+		this.couponCode = couponCode;
+	}
+	public Double getCouponDisc() {
+		return couponDisc;
+	}
+	public void setCouponDisc(Double couponDisc) {
+		this.couponDisc = couponDisc;
+	}
+	public String getExpDate() {
+		return expDate;
+	}
+	public void setExpDate(String expDate) {
+		this.expDate = expDate;
+	}
+	public Boolean getApplied() {
+		return applied;
+	}
+	public void setApplied(Boolean applied) {
+		this.applied = applied;
+	}
+	
+	
+}

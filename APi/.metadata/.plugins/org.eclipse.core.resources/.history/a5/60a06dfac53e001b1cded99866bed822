@@ -1,0 +1,6 @@
+package com.example.demo.swagger;
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig {
+
+}
