@@ -1,0 +1,12 @@
+package com.example.demo.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("COUPON-APP")
+public interface CouponRestConsumer {
+	@GetMapping("/rest/coupon/getByCode/{code}")
+	public Coupon getCouponByCode(@PathVariable String code);
+
+	@GetMapping("/rest/coupon/check/{code}")
+	public String checkExpiredOrNot(@PathVariable String code);
+}

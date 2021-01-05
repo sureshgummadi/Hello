@@ -1,0 +1,37 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.exception.ValidationError;
+import com.example.demo.model.Coupon;
+import com.example.demo.service.CouponService;
+import com.example.demo.validator.CouponValidator;
+
+@RestController
+@RequestMapping("/rest/coupon")
+public class CouponController {
+	@Autowired
+	private CouponService service;
+	@Autowired
+	private CouponValidator validator;
+
+	@PostMapping("/save")
+	public ResponseEntity<String> saveCoupon(@RequestBody Coupon
+	 coupon, Errors errors)
+	{
+	validator.validate(coupon, errors);
+	if(!errors.hasErrors()) {
+	service.saveCoupon(coupon);
+	return new ResponseEntity<String>("Coupon has been added successfully",HttpStatus.OK);
+	} else {
+	throw new ValidationError("Please Provide Valid Details");
+	}
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.example.demo.servimpl;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.service.CouponService;
+
+@Service
+public class CouponServiceImpl implements CouponService{
+
+}

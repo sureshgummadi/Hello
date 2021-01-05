@@ -1,0 +1,5 @@
+package com.example.demoexception;
+
+public class ValidationError {
+
+}

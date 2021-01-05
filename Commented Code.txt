@@ -1,0 +1,539 @@
+//	public List<HardDiskTypeMaster> readingHardDiskTypeDataFromExcel(InputStream is) {
+//		try {
+//			Workbook workbook = new XSSFWorkbook(is);
+//
+//			org.apache.poi.ss.usermodel.Sheet sheet = workbook.getSheetAt(0);
+//			java.util.Iterator<Row> rows = sheet.iterator();
+//
+//			ArrayList<HardDiskTypeMaster> hardiskTypes = new ArrayList<HardDiskTypeMaster>();
+//
+//			int rowNumber = 0;
+//			while (rows.hasNext()) {
+//				Row currentRow = rows.next();
+//
+//				if (rowNumber == 0) {
+//					rowNumber++;
+//					continue;
+//				}
+//
+//				Iterator<Cell> cellsInRow = currentRow.iterator();
+//
+//				HardDiskTypeMaster hardiskTypemaster = new HardDiskTypeMaster();
+//
+//				int cellIdx = 0;
+//				while (cellsInRow.hasNext()) {
+//					Cell currentCell = cellsInRow.next();
+//
+//					switch (cellIdx) {
+//					case 0:
+//						hardiskTypemaster.setHardDiskType(currentCell.getStringCellValue());
+//						break;
+//
+//					case 1:
+//						hardiskTypemaster.setHardDiskStatus(currentCell.getBooleanCellValue());
+//						break;
+//
+//					case 2:
+//						hardiskTypemaster.setCreatedBy(currentCell.getStringCellValue());
+//						break;
+//
+//					case 3:
+//						hardiskTypemaster.setCreatedOn(currentCell.getDateCellValue());
+//						break;
+//
+//					case 4:
+//						hardiskTypemaster.setUpdatedBy(currentCell.getStringCellValue());
+//						break;
+//
+//					case 5:
+//						hardiskTypemaster.setUpdatedOn(currentCell.getDateCellValue());
+//						break;
+//
+//					default:
+//						break;
+//					}
+//					cellIdx++;
+//				}
+//				hardiskTypes.add(hardiskTypemaster);
+//			}
+//
+//			workbook.close();
+//			return hardiskTypes;
+//
+//		} catch (IOException e) {
+//			throw new RuntimeException("fail to parse Excel file: " + e.getMessage());
+//		}
+//	}
+	
+	
+	
+//	public List<HardDiskTypeMaster> readingHardDiskTypeDataFromExcel(InputStream is) {
+//		try {
+//			Workbook workbook = new XSSFWorkbook(is);
+//
+//			org.apache.poi.ss.usermodel.Sheet sheet = workbook.getSheetAt(0);
+//			java.util.Iterator<Row> rows = sheet.iterator();
+//
+//			ArrayList<HardDiskTypeMaster> assetTypes = new ArrayList<HardDiskTypeMaster>();
+//
+//			int rowNumber = 0;
+//			while (rows.hasNext()) {
+//				Row currentRow = rows.next();
+//
+//				// skip Headers
+//
+//				if (rowNumber == 0) {
+//					rowNumber++;
+//					continue;
+//				}
+//				
+//
+//				java.util.Iterator<Cell> cellsInRow = currentRow.iterator();
+//				
+//				HardDiskTypeMaster hardDiskTypeMaster = new HardDiskTypeMaster();
+//				
+//				int cellIdx = 0;
+//				while (cellsInRow.hasNext()) {
+//					Cell currentCell = cellsInRow.next();
+//
+//					
+//					switch (cellIdx) {
+//					case 0:
+//						hardDiskTypeMaster.setHardDiskStatus(currentCell.getBooleanCellValue());
+//						break;
+//
+//					case 1:
+//						hardDiskTypeMaster.setHardDiskType(currentCell.getStringCellValue());
+//						break;
+//					
+//
+//					/*
+//					 * case 2: assetTypemaster.setCreatedBy(currentCell.getStringCellValue());
+//					 * break;
+//					 * 
+//					 * case 3: assetTypemaster.setCreatedOn(currentCell.getDateCellValue()); break;
+//					 * case 4: assetTypemaster.setUpdatedBy(currentCell.getStringCellValue());
+//					 * break; case 5: assetTypemaster.setUpdatedOn(currentCell.getDateCellValue());
+//					 * break;
+//					 */
+//
+//					default:
+//						break;
+//					}
+//					cellIdx++;
+//				}
+//				assetTypes.add(hardDiskTypeMaster);
+//			}
+//			
+//			workbook.close();
+//			return assetTypes;
+//
+//		} catch (IOException e) {
+//			throw new RuntimeException("fail to parse Excel file: " + e.getMessage());
+//		}
+//
+//	}
+
+
+//	public ByteArrayInputStream dummyHardDiskCapacityExcelFile() throws IOException {
+//		XSSFWorkbook workbook = new XSSFWorkbook();
+//
+//		XSSFSheet sheet = workbook.createSheet("HardDiskCapacity");
+//
+//		XSSFCellStyle headercellstyle = workbook.createCellStyle();
+//		headercellstyle.setFillForegroundColor(IndexedColors.AQUA.getIndex());
+//		headercellstyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//		headercellstyle.setAlignment(HorizontalAlignment.GENERAL.CENTER);
+//
+//		Row row = sheet.createRow(0);
+//
+//		SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+//
+//		String string = environment.getProperty("harddiskcapacity.table.columns");
+//		String[] split = string.split(",");
+//		Cell cell = null;
+//		for (int i = 0; i < split.length; i++) {
+//
+//			cell = row.createCell(i);
+//			cell.setCellStyle(headercellstyle);
+//			cell.setCellValue(split[i]);
+//		}
+//		
+//		sheet.autoSizeColumn(0);
+//		sheet.autoSizeColumn(1);
+//		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+//		workbook.write(outputStream);
+//		return new ByteArrayInputStream(outputStream.toByteArray());
+//
+//	}
+
+//	public ByteArrayInputStream exportDummyAssectListToExcelFile() throws IOException {
+//
+//		Map<String, String[]> map = new HashMap<String, String[]>();
+//
+//		List<HardDiskCapacity> brandlist = hardDiskCapacityDao.findAll();
+//
+//		List<HardDiskTypeMaster> assetTypelist = hardDiskTypeMasterDao.findAll();
+//
+//		String[] array = assetTypelist.stream().map(assetType -> assetType.getHardDiskType()).toArray(String[]::new);
+//
+//		for (int i = 0; i < assetTypelist.size(); i++) {
+//
+//			AssetTypeMasterEx assetType = assetRepository.findByassetType(array[i]);
+//
+//			List<Brand> brandlist1 = assetType.getBrandList();
+//
+//			String[] brands = brandlist1.stream().map(brand -> brand.getBrandname()).toArray(String[]::new);
+//
+//			map.put(array[i], brands);
+//		}
+//		Workbook workbook = new XSSFWorkbook();
+//
+//		Sheet sheet = workbook.createSheet("ListSheet");
+//
+//		Row row;
+//		Name namedRange;
+//		String colLetter;
+//		String reference;
+//
+//		int c = 0;
+//
+//		for (String key : map.keySet()) {
+//			int r = 0;
+//			row = sheet.getRow(r);
+//			if (row == null)
+//				row = sheet.createRow(r);
+//			r++;
+//			row.createCell(c).setCellValue(key);
+//			String[] items = map.get(key);
+//			for (String item : items) {
+//				row = sheet.getRow(r);
+//				if (row == null)
+//					row = sheet.createRow(r);
+//				r++;
+//				row.createCell(c).setCellValue(item);
+//			}
+//
+//			colLetter = CellReference.convertNumToColString(c);
+//			namedRange = workbook.createName();
+//			namedRange.setNameName(key);
+//			reference = "ListSheet!$" + colLetter + "$2:$" + colLetter + "$" + r;
+//			System.out.println(reference);
+//			namedRange.setRefersToFormula(reference);
+//			c++;
+//		}
+//
+//		colLetter = CellReference.convertNumToColString((c - 1));
+//
+//		namedRange = workbook.createName();
+//		namedRange.setNameName("assets");
+//		reference = "ListSheet!$A$1:$" + colLetter + "$1";
+//		System.out.println(reference);
+//		namedRange.setRefersToFormula(reference);
+//
+//		sheet.setSelected(false);
+//		sheet = workbook.createSheet("AssetData");
+//
+//		CellStyle headerCellStyle = workbook.createCellStyle();
+//		headerCellStyle.setFillForegroundColor(IndexedColors.AQUA.getIndex());
+//		headerCellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//
+//		headerCellStyle.setAlignment(HorizontalAlignment.GENERAL.CENTER);
+//
+//		String string = environment.getProperty("asset.table.columns");
+//		row = sheet.createRow(0);
+//		System.out.println(string);
+//		String[] split = string.split(",");
+//		Cell cell = null;
+//		for (int i = 0; i < split.length; i++) {
+//			cell = row.createCell(i);
+//			cell.setCellStyle(headerCellStyle);
+//			cell.setCellValue(split[i]);
+//
+//		}
+//		for (int i = 0; i < split.length; i++) {
+//			sheet.autoSizeColumn(i);
+//		}
+//
+//		sheet.autoSizeColumn(0);
+//		sheet.autoSizeColumn(1);
+//
+//		DataValidationHelper dvHelper = sheet.getDataValidationHelper();
+//
+//		DataValidationConstraint dvConstraint = dvHelper.createFormulaListConstraint("assets");
+//		CellRangeAddressList addressList = new CellRangeAddressList(1, 100, 0, 0);
+//		DataValidation validation = dvHelper.createValidation(dvConstraint, addressList);
+//		sheet.addValidationData(validation);
+//		dvConstraint = dvHelper.createFormulaListConstraint("INDIRECT(AssetData!$A$2)");
+//
+//		// dvConstraint =
+//		// dvHelper.createFormulaListConstraint("INDIRECT(AssetData!$A$3)");
+//
+//		// dvConstraint = dvHelper.createFormulaListConstraint(
+//		// "INDIRECT(OFFSET(INDIRECT(ListSheet!$A$1, 1, MATCH(AssetData!$A2,
+//		// ListSheet!$A$1:$C$1, 0) – 1, COUNTA(OFFSET(ListSheet!$A$1, 1,
+//		// MATCH(AssetData!$A2, ListSheet!$A$1:$C$1, 0) – 1, 15, 1)), 1)))");
+//		addressList = new CellRangeAddressList(1, 100, 1, 1);
+//
+//		validation = dvHelper.createValidation(dvConstraint, addressList);
+//		sheet.addValidationData(validation);
+//		workbook.setSheetHidden(0, true);
+//
+//		workbook.setActiveSheet(1);
+//
+//		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+//
+//		workbook.write(byteArrayOutputStream);
+//
+//		workbook.close();
+//
+//		return new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+//	}
+
+
+
+Ram
+
+//	@SuppressWarnings("resource")
+//	public ByteArrayInputStream exportingDummyRamCapacityToExcelFile() throws IOException {
+//
+//		XSSFWorkbook workbook = new XSSFWorkbook();
+//
+//		XSSFSheet sheet = workbook.createSheet("RamCapacity");
+//
+//		XSSFCellStyle headercellstyle = workbook.createCellStyle();
+//		headercellstyle.setFillForegroundColor(IndexedColors.AQUA.getIndex());
+//		headercellstyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//		headercellstyle.setAlignment(HorizontalAlignment.GENERAL.CENTER);
+//
+//		Row row = sheet.createRow(0);
+//
+//		String string = environment.getProperty("ramcapacity.table.colums");
+//		String[] split = string.split(",");
+//		Cell cell = null;
+//		for (int i = 0; i < split.length; i++) {
+//
+//			cell = row.createCell(i);
+//			cell.setCellStyle(headercellstyle);
+//			cell.setCellValue(split[i]);
+//		}
+//		
+//		sheet.autoSizeColumn(0);
+//		sheet.autoSizeColumn(1);
+//		
+//
+//		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+//		workbook.write(outputStream);
+//		return new ByteArrayInputStream(outputStream.toByteArray());
+//
+//	}
+
+
+//	public ArrayList<RamMaster> readingRamCapacityFromExcel(InputStream is) {
+//		try {
+//			Workbook workbook = new XSSFWorkbook(is);
+//
+//			Sheet sheet = workbook.getSheet("RamCapacity");
+//			Iterator<Row> rows = sheet.iterator();
+//
+//			ArrayList<RamMaster> ramcapacitylist = new ArrayList<RamMaster>();
+//
+//			int rowNumber = 0;
+//			while (rows.hasNext()) {
+//				Row currentRow = rows.next();
+//
+//				// skip Headers
+//
+//				if (rowNumber == 0) {
+//					rowNumber++;
+//					continue;
+//				}
+//
+//				java.util.Iterator<Cell> cellsInRow = currentRow.iterator();
+//
+//				RamMaster ramCapacity = new RamMaster();
+//
+//				int cellIdx = 0;
+//				while (cellsInRow.hasNext()) {
+//					Cell currentCell = cellsInRow.next();
+//
+//					switch (cellIdx) {
+//					case 0:
+//						
+//						String stringCellValue = currentCell.getStringCellValue();
+//						RamTypeMaster ram = ramtypdao.findByHardDiskType(stringCellValue);
+//						if (ram == null) {
+//							throw new HardDiskCapacityNotFoundException("Hrad disk capacity not found");
+//						}
+//						Set<RamTypeMaster> ramtype = new HashSet<>();
+//						ramtype.add(ram);
+//						ramCapacity.setRamTypeMasters(ramtype);
+//						
+//						ramCapacity.setRamStatus(currentCell.getBooleanCellValue());
+//						break;
+//
+//					case 1:
+//						ramCapacity.setRamCapacity(currentCell.getStringCellValue());
+//						break;
+//
+//					default:
+//						break;
+//					}
+//					cellIdx++;
+//				}
+//				ramcapacitylist.add(ramCapacity);
+//			}
+//
+//			workbook.close();
+//			return ramcapacitylist;
+//
+//		} catch (IOException e) {
+//			throw new RuntimeException("fail to parse Excel file: " + e.getMessage());
+//		}
+//
+//	}
+//}
+
+//	@SuppressWarnings("resource")
+//	public ByteArrayInputStream exportingRamTypeDataToExcelFile(List<RamTypeMaster> ramtypemaster) throws IOException {
+//
+//		XSSFWorkbook workbook = new XSSFWorkbook();
+//
+//		XSSFSheet sheet = workbook.createSheet("RamTypeMaseter");
+//
+//		XSSFCellStyle headercellstyle = workbook.createCellStyle();
+//		headercellstyle.setFillForegroundColor(IndexedColors.AQUA.getIndex());
+//		headercellstyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//		headercellstyle.setAlignment(HorizontalAlignment.GENERAL.CENTER);
+//
+//		Row row = sheet.createRow(0);
+//
+//		/* SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy"); */
+//
+//		String string = environment.getProperty("ramType.table,columns");
+//		String[] split = string.split(",");
+//		Cell cell = null;
+//		for (int i = 0; i < split.length; i++) {
+//
+//			cell = row.createCell(i);
+//			cell.setCellStyle(headercellstyle);
+//			cell.setCellValue(split[i]);
+//		}
+//		for (int i = 0; i < ramtypemaster.size(); i++) {
+//
+//			Row datarow = sheet.createRow(i + 1);
+//
+//			datarow.createCell(0).setCellValue(ramtypemaster.get(i).isRamtypeStatus());
+//			datarow.createCell(1).setCellValue(ramtypemaster.get(i).getRamtypeName());
+//
+//		}
+//
+//		sheet.autoSizeColumn(0);
+//		sheet.autoSizeColumn(1);
+//
+//		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+//		workbook.write(outputStream);
+//		return new ByteArrayInputStream(outputStream.toByteArray());
+//
+//	}
+//
+//	public String TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+//
+//	String SHEET = "AssetType";
+//
+//	public boolean hasExcelFormat(MultipartFile file) {
+//
+//		if (!TYPE.equals(file.getContentType())) {
+//			return false;
+//		}
+//
+//		return true;
+//	}
+//
+//	public ArrayList<RamTypeMaster> readingRamTypeMasterFromExcel(InputStream is) {
+//		try {
+//			Workbook workbook = new XSSFWorkbook(is);
+//
+//			org.apache.poi.ss.usermodel.Sheet sheet = workbook.getSheetAt(0);
+//			java.util.Iterator<Row> rows = sheet.iterator();
+//
+//			ArrayList<RamTypeMaster> ramtypelist = new ArrayList<RamTypeMaster>();
+//
+//			int rowNumber = 0;
+//			while (rows.hasNext()) {
+//				Row currentRow = rows.next();
+//
+//				// skip Headers
+//
+//				if (rowNumber == 0) {
+//					rowNumber++;
+//					continue;
+//				}
+//
+//				java.util.Iterator<Cell> cellsInRow = currentRow.iterator();
+//
+//				RamTypeMaster ramtypemaster = new RamTypeMaster();
+//
+//				int cellIdx = 0;
+//				while (cellsInRow.hasNext()) {
+//					Cell currentCell = cellsInRow.next();
+//
+//					switch (cellIdx) {
+//					case 0:
+//						ramtypemaster.setRamtypeStatus(currentCell.getBooleanCellValue());
+//						break;
+//
+//					case 1:
+//						ramtypemaster.setRamtypeName(currentCell.getStringCellValue());
+//						break;
+//
+//					default:
+//						break;
+//					}
+//					cellIdx++;
+//				}
+//				ramtypelist.add(ramtypemaster);
+//			}
+//
+//			workbook.close();
+//			return ramtypelist;
+//
+//		} catch (IOException e) {
+//			throw new RuntimeException("fail to parse Excel file: " + e.getMessage());
+//		}
+//
+//	}
+//
+//	public ByteArrayInputStream dummyRamTypeMasteExcelFile() throws IOException {
+//		XSSFWorkbook workbook = new XSSFWorkbook();
+//
+//		XSSFSheet sheet = workbook.createSheet("RamTypeMaster");
+//
+//		XSSFCellStyle headercellstyle = workbook.createCellStyle();
+//		headercellstyle.setFillForegroundColor(IndexedColors.AQUA.getIndex());
+//		headercellstyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//		headercellstyle.setAlignment(HorizontalAlignment.GENERAL.CENTER);
+//
+//		Row row = sheet.createRow(0);
+//
+//		SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+//
+//		String string = environment.getProperty("ramType.table,columns");
+//		String[] split = string.split(",");
+//		Cell cell = null;
+//		for (int i = 0; i < split.length; i++) {
+//
+//			cell = row.createCell(i);
+//			cell.setCellStyle(headercellstyle);
+//			cell.setCellValue(split[i]);
+//		}
+//
+//		sheet.autoSizeColumn(0);
+//		sheet.autoSizeColumn(1);
+//
+//		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+//		workbook.write(outputStream);
+//		return new ByteArrayInputStream(outputStream.toByteArray());
+//
+//	}
+//	

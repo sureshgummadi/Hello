@@ -1,0 +1,2 @@
+server.port=2528
+eureka.client.service-url.default-zone = http://localhost:2528/eureka
