@@ -1,0 +1,680 @@
+Oracle Section:
+ 
+1.How many types of joins we have in SQL and explain with examples? 
+Definition:
+JOINS are way to query the data that combined together from multiple tables simultaneously.
+
+there are 5-types of joins:
+Equi-Join or INNER-JOIN: Combines common records from two tables based on equality condition. 
+result set includes common(matched) records from both tables. 
+
+Natural-Join: It is enhanced version of Equi-Join, in which SELECT operation omits duplicate column.
+
+OUTER-JOIN: It  combines matched rows from two tables and unmatched rows with NULL values.
+However, can customized selection of un-matched rows e.g, selecting unmatched row from first table or second table by 
+sub-types: LEFT OUTER JOIN and RIGHT OUTER JOIN.
+
+1. LEFT Outer JOIN : Returns matched rows form two tables and unmached from LEFT table(i.e, first table) only.
+
+2. RIGHT Outer JOIN : Returns matched rows from two tables and unmatched from RIGHT table only.
+
+3. FULL OUTER JOIN : Returns matched and unmatched from both tables.
+
+Self-Join:: A customized behavior of join where a table combined with itself; 
+This is typically needed for querying self-referencing tables .
+
+
+Cartesian Product: It cross combines all records of both tables without any condition.
+ Technically, it returns result set of a query without WHERE-Clause.
+
+
+
+2.what is the difference between a WITH clause and sub query?
+The WITH query_name clause lets you assign a name to a subquery block. 
+You can then reference the subquery block multiple places in the query by specifying query_name.
+Oracle Database optimizes the query by treating the query name as either an inline view or as a temporary table.
+
+The subquery no longer has to be repeated. The more complicated the repeated code is,
+ the more beneficial it is from a maintenance point of view to use a CTE. 
+And the more expensive the subquery is the more performance benefit you could see from using a CTE,
+ though the optimiser is usually pretty good at figuring out what you're doing anyway.
+
+3. Write SQL statement to print last month first date and last date by using sysdate?
+
+to find the last_month first_date:
+
+select last_day(add_months(sysdate,-2))+1 from dual;
+
+to find last_month last_date:
+
+select last_day(add_months(sysdate,-1)) from dual;
+
+4. What is Index and Explain about the types of indexes in oracle?
+
+To increase or improve the performance of data retrieve
+Types of index:
+>B* TREE INDEX
+>BIT MAP INDEX
+>COMPOSITE INDEX
+>FUNCTION BASED INDEX
+>UNIQUE INDEX
+>IOT(index organization table)
+
+
+B*TREE INDEX:
+
+its used for high coordinately column(less duplicate)
+Syntax: 
+Create index index_name on tab_name(col_name);
+Ex: create index idx1 on emp9 (first_name);
+
+BIT MAP INDEX:
+
+its used for LOW coordinately column(more duplicate)
+Syntax: 
+Create index index_name on tab_name(col_name);
+Ex: Create index idx2 on emp9 (gender);
+
+COMPOSITE INDEX:
+
+Its used to create more than one column
+Syntax:
+Create index idx4 on emp9 (first_name,salary);
+
+FUNCTION BASED INDEX:
+
+its used for function based column
+Syntax: 
+Create index index_name on tab_name (function(col_name));
+Ex: create index idx3 on emp9 (length(first_name);
+
+UNIQUE INDEX:
+
+Its created for unique values 
+primary key is also consider as unique index
+ it will ignore duplicate and null values.
+
+Syntax:
+Create unique index idx5 on emp9 ;
+
+IOT(index organization table)
+:
+Its cluster index
+ the values are inserted in IOT it will return in ascending always.
+Syntax:
+Create table t9
+(a number
+Primary key);
+
+
+5. What is the output for below statements?
+a.	translate('sciohealth','io','x')
+          Answer: scxhealth
+
+select translate('sciohealth','io','x') from dual;
+
+
+b.	replace('sciohealth','io')
+        Answer:schealth
+
+select replace('sciohealth','io') from dual;
+
+
+c.	substr('sciohealth',-2)
+         Answer:th
+
+select substr('sciohealth',-2) from dual;
+
+
+d.	instr('sciohealthanalytics','a',1,2)
+          Answer:11
+
+select instr('sciohealthanalytics','a',1,2) from dual;
+
+
+6. What is the output for below statements?
+
+a.	round(85.89,1)
+         Answer:85.9
+
+select round(85.89,1) from dual;
+
+
+b.	trunc(85.89,1)
+         Answer:85.8
+
+select trunc(85.89,1) from dual;
+
+
+c.	round(85.89,-1)
+        Answer:90
+
+select round(85.89,-1) from dual;
+
+
+d.	trunc(85.89,-1)
+        Answer:80
+
+select trunc(85.89,-1) from dual;
+
+
+7. What is the output for below statements?
+
+a.	round('14-FEB-2018','mm')
+         Answer:Invalid number
+
+select round('14-FEB-2018','mm') from dual;
+
+
+b.	trunc(14-FEB-2018','mm')
+         Answer:Invalid number
+
+select trunc('14-FEB-2018','mm') from dual;
+
+
+c.	round(sysdate,'yyyy')
+        Answer:01-JAN-2019
+
+select round(sysdate,'yyyy') from dual;
+
+
+
+d.	trunc(sysdate,'yyyy')
+         Answer:01-JAN-2019
+
+select trunc(sysdate,'yyyy') from dual;
+
+8. What is the output for below statements?
+
+a.	round('16-FEB-2018','mm')
+
+      Answer:Invalid number
+
+select round('l6-FEB-2018','mm') from dual;
+
+
+b.	to_char(20160214,'dd-mon-yyyy')
+           Answer:Invalid number format
+
+select to_char(20160214,'dd-mon-yyyy') from dual;
+
+
+c.	to_date(20160214,'yyyymmdd')
+         Answer:14-FEB-2016
+
+select to_date(20160214,'yyyymmdd') from dual;
+
+d.	to_date(20160214,'DD-MON-YYYY')
+        Answer:Literal does not match string
+
+select to_date(20160214,'DD-MM-YYYY') from dual;
+
+
+9. Write SQL statement to print number of occurrences of 'a' in 'Scio health analytics'.
+
+        Answer: 3
+
+select length('sciohealthanalytics')-length(replace('sciohealthanalytics','a')) from dual;
+
+
+10. Write SQL statement to print department details from DEPT table which his not contains 
+my employees in EMP table?
+
+
+select deptno,dname from dept1 where deptno not in(select deptno from emp1);
+
+TABLE NAME: EMP
+
+EMPNO    ENAME       SAL    DEPTNO
+
+1001      Shyam     1500     10
+
+1002      Sundar    1750     20
+
+1003      Raju      2000     30
+
+1004      Dinesh    2500     20
+
+1005      Sundari   2100     30
+
+1006      Anupama   3000     10
+
+1007      Subbu     4500     10
+
+TABLE NAME: DEPT
+
+DEPTNO     DNAME
+
+10       Technology
+
+20         Sales
+
+30       Marketing
+
+40        Analytics
+
+
+11. Write SQL statement to print following output by using above two tables? 
+
+DEPTNO     DNAME       COUNT(EMPNO)
+
+10       Technology       3
+
+20         Sales          2
+
+30       Marketing        1
+
+40        Analytics       0
+
+
+
+select d1.deptno,d1.dname,count(e1.empno) from emp1 e1,dept1 d1 where e1.deptno(+)=d1.deptno group by d1.deptno,d1.dname
+
+
+12.Write SQL statement to print employee details where employee salary is greater than
+average salary of his departments?
+
+
+select * from emp1 where sal >(select avg(sal) from emp1);
+
+13. Write SQL statement to print minimum paid employee from each department using EMP table?
+
+select deptno,min(sal) from emp1 group by deptno;
+
+
+14.What is explain plan and explain briefly about explain plan?
+
+•	EXPLAIN PLAN parses a query and records the "plan" that Oracle
+Devises to execute it. By examining this plan, you can find out if Oracle is picking the right indexes and joining
+ your tables in the most efficient manner. 
+•	There are a few different ways to utilize Explain Plan. We will focus on
+using it through SQL*Plus since most Oracle programmers have access to SQL*Plus.
+
+What we will see in Explain:
+        JOINS
+                      Nested loop
+                      Hash
+                      Sort Merge
+        INDEX SCAN
+                     Unique Scan
+                     Range Scan
+                     Full Scan
+                     Fast Full Scan
+                       Skip scan
+         CPU  Time Cost/Cordinality
+                       Cost = Outer Access + (Inner table access * Outer cardinality)         
+STATISTICS:
+Oracle generate explain plan based on below statistics
+1.	Database
+2.	Schema
+3.	Table
+4.	Column
+5.	Index
+
+
+
+15.What is the diffrence between SUBSTR and INSTR?
+
+INSTR function finds the numeric starting position of a string within a string.
+
+As eg.
+
+Select INSTR('Mississippi','i',3,3) test1,
+
+         INSTR('Mississippi','i',1,3) test2,
+
+         INSTR('Mississippi','i',-2,3) test3
+
+from dual;
+
+Its output would be like this
+
+Test1           Test2              Test3
+
+___________________________________________
+
+11                   8                     2
+
+SUBSTR function returns the section of thte specified string, specified by numeric character positions.
+
+As eg.
+
+Select SUBSTR('The Three Musketeers',1,3) from dual;
+
+will return 'The'.
+
+
+
+16.HOW to handle null values?
+
+A field with a NULL value is a field with no value.
+
+If a field in a table is optional, it is possible to insert a new record or update a record without adding a value to this field.
+ Then, the field will be saved with a NULL value.
+We will have to handle use the IS NULL and IS NOT NULL operators instead.
+
+
+
+17.what is RANK and DENSE_RANK? What is the Difference between those?
+
+RANK gives you the ranking within your ordered partition. Ties are assigned the same rank,
+ with the next ranking(s) skipped. So, if you have 3 items at rank 2, the next rank listed would be ranked 5.
+
+DENSE_RANK again gives you the ranking within your ordered partition, but the ranks are consecutive.
+ No ranks are skipped if there are ranks with multiple items.
+
+18.What number comes next in this series: 
+1, 11, 12, 1121, 122111, .....
+ answer:112213
+	
+19.Which number replaces the question mark?
+
+5  8  11
+10 14 12
+7  3   ?
+
+20.A train traveling at 72 kmph crosses a platform in 30 seconds and a man standing on the platform in 18 seconds. 
+What is the length of the platform in meters?
+
+240 meters
+
+
+1.what is view? Advantages and disadvantages?
+
+View is the simply subset of table which are stored logically in a database  means a view is a virtual table in the database 
+whose contents are defined by a query. 
+
+To the database user, the view appears just like a real table, with a set of named columns and rows of data.
+ SQL creates the illusion of the view by giving the view a name like a table name and storing the definition of 
+the view in the database.
+
+Views are used for security purpose in databases,views  restricts the user from viewing certain column and 
+rows means by using view we can apply the restriction on accessing the particular rows and columns for specific user. 
+Views display only those data which are mentioned in the query, so it shows only data which is returned by 
+the query that is defined at the time of creation of the View. 
+
+Advantages of views
+
+Security
+
+Each user can be given permission to access the database only through a small set of views that contain the specific data 
+the user is authorized to see, thus restricting the user's access to stored data
+
+Query Simplicity
+
+A view can draw data from several different tables and present it as a single table, turning multi-table queries into
+ single-table queries against the view.
+
+Structural simplicity
+
+Views can give a user a "personalized" view of the database structure, presenting the database as a set of virtual tables
+ that make sense for that user.
+
+Consistency
+
+A view can present a consistent, unchanged image of the structure of the database, even if the underlying source tables
+ are split, restructured, or renamed.
+
+Data Integrity
+
+If data is accessed and entered through a view, the DBMS can automatically check the data to ensure that it meets 
+the specified integrity constraints.
+
+Logical data independence.
+
+ View can make the application and database tables to a certain extent independent. If there is no view, 
+the application must be based on a table. With the view, the program can be established in view of above,
+ to view the program with a database table to be separated.
+
+Disadvantages of views
+
+Performance
+
+Views create the appearance of a table, but the DBMS must still translate queries against the view into queries against 
+the underlying source tables. If the view is defined by a complex, multi-table query then simple queries on 
+the views may take considerable time.
+
+Update restrictions
+
+When a user tries to update rows of a view, the DBMS must translate the request into an update on rows of 
+the underlying source tables. This is possible for simple views, but more complex views are often restricted to read-only.
+
+2.To join 5 tables.how many minimum no of joins are required?
+
+4 joins.
+
+|-|-|-|-|
+
+table -> table -> table -> table -> table 
+
+3.Convert into date format,
+a) 20130525.............>'25-may-2013'
+
+select to_date('20130525','yyyy-mm-dd') from dual;
+
+b) system date..........> Date only
+
+select to_char(sysdate,'dd') from dual;
+
+
+4.What is ROUND(56.89) and TRUNC(56.89)?
+
+
+select round(56.89) from dual;
+
+ROUND(56.89)
+57
+
+select trunc(56.89) from dual;
+
+TRUNC(56.89)
+56
+
+5.how many types of indexes are available in oracle?Give the explaniation on the each index.
+
+To increase or improve the performance of data retrieve
+Types of index:
+>B* TREE INDEX
+>BIT MAP INDEX
+>COMPOSITE INDEX
+>FUNCTION BASED INDEX
+>UNIQUE INDEX
+>IOT(index organization table)
+
+
+B*TREE INDEX:
+
+its used for high coordinately column(less duplicate)
+Syntax: 
+Create index index_name on tab_name(col_name);
+Ex: create index idx1 on emp9 (first_name);
+
+BIT MAP INDEX:
+
+its used for LOW coordinately column(more duplicate)
+Syntax: 
+Create index index_name on tab_name(col_name);
+Ex: Create index idx2 on emp9 (gender);
+
+COMPOSITE INDEX:
+
+Its used to create more than one column
+Syntax:
+Create index idx4 on emp9 (first_name,salary);
+
+FUNCTION BASED INDEX:
+
+its used for function based column
+Syntax: 
+Create index index_name on tab_name (function(col_name));
+Ex: create index idx3 on emp9 (length(first_name);
+
+UNIQUE INDEX:
+
+Its created for unique values 
+primary key is also consider as unique index
+ it will ignore duplicate and null values.
+
+Syntax:
+Create unique index idx5 on emp9 ;
+
+IOT(index organization table)
+:
+Its cluster index
+ the values are inserted in IOT it will return in ascending always.
+Syntax:
+Create table t9
+(a number
+Primary key);
+
+6.how to handle the null values ? what is the difference NOT IN and NOT EXISTS operator?
+A field with a NULL value is a field with no value.
+
+If a field in a table is optional, it is possible to insert a new record or update a record without adding a value to this field.
+ Then, the field will be saved with a NULL value.
+We will have to handle use the IS NULL and IS NOT NULL operators instead.
+
+NOT IN is not equivalent to NOT EXISTS when it comes to null.
+When the subquery returns even one null, NOT IN will not match any rows.
+if any row of that subquery returns NULL, the entire NOT IN operator will evaluate to either FALSE or NULL and 
+no records will be returned
+
+
+7.what is the DECODE and CASE statements? what is difference between both?Give one example on each.
+
+There is one big difference between DECODE and CASE and it has to do with how NULLs are compared. 
+ DECODE will return "true" if you compare NULL to NULL.  CASE will not. For example:
+
+DECODE(NULL, NULL, 1, 0)
+will return '1'.
+
+CASE NULL
+    WHEN NULL THEN 1
+    ELSE 0
+END
+
+will return '0'. 
+You would have to write it as:
+
+CASE
+    WHEN NULL IS NULL THEN 1
+    ELSE 0
+END
+
+CASE	                                     DECODE
+1.We can use relational operators          We cannot use relational operators
+   Ex: =,>,<
+
+Note : Case is Faster	
+2.can be assigned to a variable	            can't be assigned to a variable
+
+3.case can be written independently or  
+ in select statement	                    Only it can be used in select statement
+
+
+8.Give one example on each of the below functions;
+
+a) TRANSLATE
+
+select translate('greens','en','ai') from dual;
+
+TRANSLATE('GREENS','EN','AI')
+graais
+
+b) REPLACE
+
+select replace('greens','en','ai') from dual;
+
+REPLACE('GREENS','EN','AI')
+greais
+
+c) SUBSTR
+
+select substr('greens',1,3) from dual;
+
+SUBSTR('GREENS',1,3)
+gre
+
+d) INSTR
+
+select instr('greens','e',1,1) from dual;
+
+INSTR('GREENS','E',1,1)
+3
+
+e) TRUNC
+
+select trunc(99.6) from dual;
+
+TRUNC(99.6)
+99
+
+Employee:
+
+EMPNO  ENAME   SALARY   DEPTNO
+1001	A      1000      10
+1002	B      2500      20
+1003	C      6000      20
+1004	D      5000      30
+1005	E      1500      10
+
+
+9.Write a query to pull 2nd highest salary employee details.
+
+select max(sal) from emp2 where sal != (select max(sal) from emp2);
+
+
+10.Write a query to pull department wise sum of salary.
+
+select deptno,sum(sal) from emp2 group by deptno;
+
+
+11.What is RANK and DENSE_RANK? What is the Difference between those?
+
+RANK gives you the ranking within your ordered partition. Ties are assigned the same rank,
+ with the next ranking(s) skipped. So, if you have 3 items at rank 2, the next rank listed would be ranked 5.
+
+DENSE_RANK again gives you the ranking within your ordered partition, but the ranks are consecutive.
+ No ranks are skipped if there are ranks with multiple items.
+
+12.What is GRANT and ROLLBACK?
+
+SQL GRANT statement to grant SQL SELECT, UPDATE, INSERT, DELETE, and other privileges on tables or views.
+
+For example, suppose user JONES needs to use the Change mode of the Table Editor for a table called ORDER_BACKLOG.
+ To grant JONES the UPDATE privilege on the ORDER_BACKLOG table, issue the following statement:
+
+GRANT UPDATE ON ORDER_BACKLOG TO JONES WITH GRANT OPTION
+
+SQL RollBack. ROLLBACK is the SQL command that is used for reverting changes performed by a transaction.
+ When a ROLLBACK command is issued it reverts all the changes since last COMMIT or ROLLBACK.
+
+13.When can we use WHERE clause and when can we use HAVING clause?
+
+ WHERE clause is used for filtering rows and it applies on each and every row, while HAVING clause is used to filter 
+groups in SQL. 3) One syntax level difference between WHERE and HAVING clause is that, former is used
+ before GROUP BY clause, while later is used after GROUP BY clause.
+
+
+14.Convert SYSDATE into US date format and Indian date format.
+
+INDIAN DATE FORMAT
+select to_char(sysdate,'dd-mm-yyyy') from dual;
+29-01-2019
+
+US DATE FORMAT
+
+select to_char(sysdate,'mm-dd-yyyy') from dual;
+01-29-2019
+
+15.What is the purpose of the EXPLAIN PLAN, when and how it can be used?
+
+
+sqlplus  set autotrace on;
+Explain plan for select * from employees;
+select dbms_xplan.display from dual;
+
+
+
+
+
