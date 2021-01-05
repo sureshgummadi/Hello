@@ -8,13 +8,13 @@ import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
 import lombok.RequiredArgsConstructor;
 
 @Data
 @AllArgsConstructor
 //@NoArgsConstructor
 @RequiredArgsConstructor
+
 @Entity
 @Table(name="employee")
 public class Employee {
