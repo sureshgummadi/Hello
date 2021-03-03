@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/SpringBootMysqlJar-0.0.1-SNAPSHOT.jar SpringBoot.jar
+EXPOSE 2525
+ENTRYPOINT ["java", "-jar", "SpringBoot.jar"]
